@@ -3,7 +3,7 @@ const categories = [
         id: 1,
         name: 'Paper',
         items: [
-            { image: '1.jpg', text: 'Printer paper', price: '$10.99' },
+            { image: 'placeholder.jpg', text: 'Printer paper', price: '$10.99' },
             { image: 'three_hole_paper.jpg', text: 'Three-hole punched paper', price: '$8.99' },
             { image: 'graph_paper.jpg', text: 'Graph paper', price: '$12.99' },
             { image: 'carbon_paper.jpg', text: 'Carbon paper', price: '$6.99' },
@@ -30,8 +30,8 @@ const categories = [
         id: 3,
         name: 'Office supply',
         items: [
-            { image: 'stapler.jpg', text: 'Stapler', price: '$14.99' },
-            { image: 'staples.jpg', text: 'Staples', price: '$2.99' },
+            { image: 'stapler.jpg', text: 'Stapler', price: 'USh 42,000' },
+            { image: 'staples.png', text: 'Staples', price: 'USh 7,500' },
             { image: 'stapler_remover.jpg', text: 'Stapler remover', price: '$5.99' },
             { image: 'scissors.jpg', text: 'Scissors', price: '$8.99' },
             { image: 'box_cutter.jpg', text: 'Box cutter', price: '$10.99' },
@@ -55,7 +55,7 @@ const categories = [
         id: 4,
         name: 'Filing cabinet',
         items: [
-            { image: 'manila_folders.jpg', text: 'Manila folders', price: '$9.99' },
+            { image: 'manila_folders.jpg', text: 'Manila folders', price: 'USh 165,000 - 280,000' },
             { image: 'hanging_folders.jpg', text: 'Hanging folders', price: '$12.99' },
             { image: 'folder_tabs.jpg', text: 'Folder tabs', price: '$2.99' }
         ]
@@ -77,7 +77,7 @@ const categories = [
         items: [
             { image: 'composition_notebooks.jpg', text: 'Composition notebooks', price: '$4.99' },
             { image: 'spiral_notebooks.jpg', text: 'Spiral-bound notebooks', price: '$6.99' },
-            { image: 'legal_pads.jpg', text: 'Legal pads', price: '$3.99' }
+            { image: 'legal_pads.jpg', text: 'Legal pads', price: 'USh 65,000' }
         ]
     },
     {
@@ -112,7 +112,7 @@ function showItems(items) {
     items.forEach(item => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td><img class="image-table" src="static/assets/${item.image}" alt="${item.text}"></td>
+            <td><img class="image-table border" src="static/assets/${item.image}" alt="${item.text}"></td>
             <td>${item.text}</td>
             <td class="text-primary">${item.price}</td>
         `;

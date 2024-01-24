@@ -19,7 +19,7 @@ Stationary Items
 - Cardboard boxes (small, medium, large)
 
 3 - Office supply
-- Stappler = 17000, 28000, 120000, 140000
+- Stappler
 - Staples
 - Stapler remover
 - Scissors
