@@ -56,8 +56,8 @@ const categories = [
         name: 'Filing cabinet',
         items: [
             { image: 'manila_folders.jpg', text: 'Manila folders', price: 'USh 165,000 - 280,000' },
-            { image: 'hanging_folders.jpg', text: 'Hanging folders', price: '$12.99' },
-            { image: 'folder_tabs.jpg', text: 'Folder tabs', price: '$2.99' }
+            { image: 'hanging_folders.jpg', text: 'Hanging folders', price: 'USh 25,000' },
+            { image: 'folder_tabs.jpg', text: 'Folder tabs', price: 'USh 30,500' }
         ]
     },
     {
@@ -93,9 +93,10 @@ const categories = [
     }
 ];
 
-
 const categoriesContainer = document.getElementById('categories-container');
 const itemsContainer = document.getElementById('items-container');
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
 
 categories.forEach(category => {
     const categoryElement = document.createElement('a');
@@ -111,11 +112,39 @@ function showItems(items) {
     const tbody = document.getElementById('items-container');
     items.forEach(item => {
         const row = document.createElement('tr');
-        row.innerHTML = `
-            <td><img class="image-table border" src="static/assets/${item.image}" alt="${item.text}"></td>
-            <td>${item.text}</td>
-            <td class="text-primary">${item.price}</td>
-        `;
+        const imageCell = document.createElement('td');
+        const itemCell = document.createElement('td');
+        const priceCell = document.createElement('td');
+
+        // Create a clickable image
+        const imageElement = document.createElement('img');
+        imageElement.src = `static/assets/${item.image}`;
+        imageElement.alt = item.text;
+        imageElement.classList.add('image-table', 'border', 'img-thumbnail', 'img-clickable');
+        imageElement.addEventListener('click', () => showImageInModal(`static/assets/${item.image}`));
+
+        // Apply styles to cells
+        // imageCell.style.verticalAlign = 'baseline'; // Adjust vertical alignment if needed
+        priceCell.style.color = '#0d6efd'; // Example: Set the text color to blue
+
+        // Create other cells
+        itemCell.textContent = item.text;
+        priceCell.textContent = item.price;
+
+        // Append cells to the row
+        imageCell.appendChild(imageElement);
+        row.appendChild(imageCell);
+        row.appendChild(itemCell);
+        row.appendChild(priceCell);
+
+        // Append the row to the table body
         tbody.appendChild(row);
     });
+}
+
+
+
+function showImageInModal(imageSrc) {
+    modalImage.src = imageSrc;
+    $('#imageModal').modal('show');
 }
