@@ -3,14 +3,14 @@ const categories = [
         id: 1,
         name: 'Paper',
         items: [
-            { image: 'placeholder.jpg', text: 'Printer paper', price: '$10.99' },
-            { image: 'three_hole_paper.jpg', text: 'Three-hole punched paper', price: '$8.99' },
-            { image: 'graph_paper.jpg', text: 'Graph paper', price: '$12.99' },
-            { image: 'carbon_paper.jpg', text: 'Carbon paper', price: '$6.99' },
-            { image: 'color_card_stock.jpg', text: 'Color card stock', price: '$14.99' },
+            { image: 'printer_paper.jpg', text: 'Printer paper. 500 Sheets, A4', price: 'UGX 24,000' },
+            { image: 'three_hole_paper.jpg', text: 'Three-hole punched paper. 8-1/2 x 11 Inches, Yellow, 100 Sheets', price: 'UGX 85885' },
+            { image: 'graph_paper.jpg', text: 'Graph paper', price: 'UGX 22,000' },
+            { image: 'carbon_paper.jpg', text: 'Carbon paper. 1 pkt, 100 Sheets, A4', price: 'UGX 15,000' },
+            { image: 'color_card_stock.jpg', text: 'Color card stock', price: 'USh 35,000' },
             { image: 'heavy_duty_card_stock.jpg', text: 'Heavy-duty card stock', price: '$16.99' },
             { image: 'greeting_cards.jpg', text: 'Greeting cards and envelopes', price: '$19.99' },
-            { image: 'tracing_paper.jpg', text: 'Tracing paper', price: '$9.99' }
+            { image: 'tracing_paper.jpg', text: 'Tracing paper', price: 'UGX 19,000' }
         ]
     },
     {
@@ -21,7 +21,7 @@ const categories = [
             { image: 'legal_envelopes.jpg', text: 'Legal envelopes', price: '$7.99' },
             { image: 'padded_mailers.jpg', text: 'Padded legal envelope mailers', price: '$12.99' },
             { image: 'postage_stamps.jpg', text: 'Postage stamps', price: '$3.99' },
-            { image: 'envelope_sealer.jpg', text: 'Envelope sealer', price: '$2.99' },
+            { image: 'envelope_sealer.jpg', text: 'Envelope sealer, A5, Self Seal, 50pcs per packet', price: 'UGX 9,000' },
             { image: 'packaging_bubble.jpg', text: 'Packaging bubble', price: '$9.99' },
             { image: 'cardboard_boxes.jpg', text: 'Cardboard boxes (small, medium, large)', price: '$15.99 - $25.99' }
         ]
@@ -31,21 +31,21 @@ const categories = [
         name: 'Office supply',
         items: [
             { image: 'stapler.jpg', text: 'Stapler', price: 'USh 42,000' },
-            { image: 'staples.png', text: 'Staples', price: 'USh 7,500' },
-            { image: 'stapler_remover.jpg', text: 'Stapler remover', price: '$5.99' },
-            { image: 'scissors.jpg', text: 'Scissors', price: '$8.99' },
-            { image: 'box_cutter.jpg', text: 'Box cutter', price: '$10.99' },
-            { image: 'paper_clips.jpg', text: 'Paper clips (small, medium, large)', price: '$3.99 - $7.99' },
-            { image: 'binder_clips.jpg', text: 'Binder clips (small, medium, large)', price: '$4.99 - $9.99' },
-            { image: 'cellophane_tape.jpg', text: 'Clear cellophane tape', price: '$3.99' },
-            { image: 'masking_tape.jpg', text: 'Masking tape', price: '$2.99' },
-            { image: 'packing_tape.jpg', text: 'Packing tape', price: '$5.99' },
+            { image: 'staples.jpg', text: 'Staples', price: 'USh 7,500' },
+            { image: 'stapler_remover.jpg', text: 'Stapler remover', price: 'UGX 4,000' },
+            { image: 'scissors.jpg', text: 'Scissors', price: 'UGX 9,000' },
+            { image: 'box_cutter.jpg', text: 'Box cutter', price: 'UGX 4,000' },
+            { image: 'paper_clips.jpg', text: 'Paper clips (small, medium, large)', price: 'UGX 3,000' },
+            { image: 'binder_clips.jpg', text: 'Binder clips (small, medium, large)', price: 'UGX 10,000' },
+            { image: 'cellophane_tape.jpg', text: 'Clear cellophane tape', price: 'UGX 4,500' },
+            { image: 'masking_tape.jpg', text: 'Masking tape', price: 'UGX 4,500' },
+            { image: 'packing_tape.jpg', text: 'Packing tape', price: 'USh 15,000' },
             { image: 'duct_tape.jpg', text: 'Duct tape', price: '$7.99' },
             { image: 'sticky_notes.jpg', text: 'Sticky notes (small, medium, large)', price: '$3.99 - $6.99' },
             { image: 'bookmark_flags.jpg', text: 'Bookmark sticky flags (small, medium, large)', price: '$2.99 - $5.99' },
             { image: 'bookmarks.jpg', text: 'Bookmarks', price: '$4.99' },
-            { image: 'white_glue.jpg', text: 'White glue', price: '$3.99' },
-            { image: 'rubber_cement.jpg', text: 'Rubber cement', price: '$4.99' },
+            { image: 'white_glue.jpg', text: 'White glue', price: 'USh 45,000' },
+            { image: 'rubber_cement.jpg', text: 'Rubber cement', price: 'UGX 54703' },
             { image: 'wall_mount_gum.jpg', text: 'Tacky wall mount gum', price: '$6.99' },
             { image: 'hanging_hooks.jpg', text: 'Hanging hooks', price: '$1.99' },
             { image: 'magnifying_glass.jpg', text: 'Magnifying glass', price: '$12.99' }
@@ -64,19 +64,19 @@ const categories = [
         id: 5,
         name: 'Writing implements',
         items: [
-            { image: 'pencils.jpg', text: 'Pencils', price: '$1.99' },
-            { image: 'pencil_sharpener.jpg', text: 'Pencil sharpener', price: '$3.99' },
-            { image: 'mechanical_pencils.jpg', text: 'Mechanical pencils', price: '$5.99' },
+            { image: 'pencils.jpg', text: 'Pencils', price: 'UGX 4,000' },
+            { image: 'pencil_sharpener.jpg', text: 'Pencil sharpener', price: 'USh 35,000' },
+            { image: 'mechanical_pencils.jpg', text: 'Mechanical pencils', price: 'UGX 12,000' },
             { image: 'lead_refills.jpg', text: 'Mechanical pencil lead refills', price: '$2.99' },
-            { image: 'erasers.jpg', text: 'Erasers', price: '$1.99' }
+            { image: 'erasers.jpg', text: 'Erasers', price: 'UGX 48247' }
         ]
     },
     {
         id: 6,
         name: 'Notebooks and notepads',
         items: [
-            { image: 'composition_notebooks.jpg', text: 'Composition notebooks', price: '$4.99' },
-            { image: 'spiral_notebooks.jpg', text: 'Spiral-bound notebooks', price: '$6.99' },
+            { image: 'composition_notebooks.jpg', text: 'Composition notebooks', price: 'USh 20,000' },
+            { image: 'spiral_notebooks.jpg', text: 'Spiral-bound notebooks. A4 Side, 70 Sheets', price: 'UGX 4,000' },
             { image: 'legal_pads.jpg', text: 'Legal pads', price: 'USh 65,000' }
         ]
     },
@@ -84,9 +84,9 @@ const categories = [
         id: 7,
         name: 'Binder items',
         items: [
-            { image: 'binders.jpg', text: 'Binders', price: '$7.99' },
+            { image: 'binders.jpg', text: 'Binders', price: 'USh 6,000' },
             { image: 'binder_tabs.jpg', text: 'Binder tabs', price: '$2.99' },
-            { image: 'binder_pockets.jpg', text: 'Binder pockets', price: '$3.99' },
+            { image: 'binder_pockets.jpg', text: 'Binder pockets', price: 'UGX 19,000' },
             { image: 'document_holders.jpg', text: 'Clear binder document holders', price: '$5.99' },
             { image: 'hole_puncher.jpg', text: 'Single or three-hole puncher', price: '$8.99' }
         ]
